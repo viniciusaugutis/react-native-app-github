@@ -18,7 +18,7 @@ class Header extends Component {
   signOut = async () => {
     const {navigation} = this.props;
     await AsyncStorage.clear();
-    navigation.navigate('Welcome');
+    navigation.navigate('User');
   };
 
   render() {
