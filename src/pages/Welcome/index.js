@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import api from '~/services/api';
+import PropTypes from 'prop-types';
 
 import {
   View,
@@ -15,6 +16,12 @@ import styles from './styles';
 import {TextInput} from 'react-native-gesture-handler';
 
 export default class Welcome extends Component {
+  static propTypes = {
+    navigation: PropTypes.shape({
+      navigation: PropTypes.func,
+    }),
+  };
+
   state = {
     username: '',
     loading: false,

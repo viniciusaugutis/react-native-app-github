@@ -43,3 +43,8 @@ getData = async () => {
 ```
 
 Responsável por salvar informações em um banco local do celular
+
+## Icones no react-native
+
+yarn add react-native-vector-icons
+react-native link react-native-vector-icons
