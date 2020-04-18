@@ -19,22 +19,31 @@ export default class Repositories extends Component {
   state = {
     data: [],
     loading: true,
+    refreshing: false,
   };
 
   async componentDidMount() {
+    this.loadRepositories();
+  }
+
+  loadRepositories = async () => {
+    this.setState({refreshing: true});
     const username = await AsyncStorage.getItem('@Githuber:username');
     const response = await api.get(`/users/${username}/repos`);
     this.setState({data: response.data, loading: false});
-  }
+    this.setState({refreshing: false});
+  };
 
   renderList = () => {
-    const {data} = this.state;
+    const {data, refreshing} = this.state;
 
     return (
       <FlatList
         data={data}
         keyExtractor={(item) => String(item.id)}
         renderItem={this.renderListItem}
+        onRefresh={this.loadRepositories}
+        refreshing={refreshing}
       />
     );
   };
