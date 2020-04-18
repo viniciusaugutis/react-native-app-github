@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 
-import {View, Text, ActivityIndicator} from 'react-native';
+import {View, Text, ActivityIndicator, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Header from '~/components/Header';
 import api from '~/services/api';
 import AsyncStorage from '@react-native-community/async-storage';
 import styles from './styles';
+
+import RepositoryItem from './RepositoryItem';
 
 export default class Repositories extends Component {
   static navigationOptions = {
@@ -26,18 +28,30 @@ export default class Repositories extends Component {
   }
 
   renderList = () => {
-    <Text>Lista</Text>;
+    const {data} = this.state;
+
+    return (
+      <FlatList
+        data={data}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={this.renderListItem}
+      />
+    );
+  };
+
+  renderListItem = ({item}) => {
+    return <RepositoryItem repository={item} />;
   };
 
   render() {
     const {loading} = this.state;
     return (
-      <View>
+      <View style={styles.container}>
         <Header title="Repositórios" />
         {loading ? (
           <ActivityIndicator style={styles.loading} />
         ) : (
-          <Text>Lista</Text>
+          this.renderList()
         )}
       </View>
     );
