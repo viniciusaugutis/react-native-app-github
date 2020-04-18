@@ -1,8 +1,7 @@
 import React from 'react';
 
 import {View, Text} from 'react-native';
-
-// import { Container } from './styles';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const Repositories = () => (
   <View>
