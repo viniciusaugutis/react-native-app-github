@@ -3,33 +3,23 @@ import {colors, metrics} from '~/styles';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: colors.white,
     borderRadius: metrics.baseRadius,
     padding: metrics.basePadding,
-    marginHorizontal: metrics.baseMargin * 2,
     marginTop: metrics.baseMargin,
+    alignItems: 'center',
+    maxWidth: (metrics.screenWidth - 60) / 2,
+  },
+  avatar: {
+    width: 50,
+    height: 50,
   },
   title: {
     fontSize: 14,
     fontWeight: 'bold',
     color: colors.primary,
-  },
-  infoContainer: {
-    flexDirection: 'row',
     marginTop: metrics.baseMargin,
-  },
-  info: {
-    flexDirection: 'row',
-    marginRight: metrics.baseMargin,
-    alignItems: 'center',
-  },
-  infoIcon: {
-    color: colors.dark,
-  },
-  infoText: {
-    color: colors.primary,
-    fontSize: 12,
-    marginLeft: metrics.baseMargin / 2,
   },
 });
 

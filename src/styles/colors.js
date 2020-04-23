@@ -11,6 +11,7 @@ export default {
   secundary: '#444A5A',
   success: '#9DCA83',
   danger: '#E37a7a',
+  warning: '#FFA500',
 
   transparent: 'transparent',
   darkTransparent: 'rgba(0,0,0, 0.6)',
