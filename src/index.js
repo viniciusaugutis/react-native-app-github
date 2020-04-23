@@ -3,8 +3,9 @@ import {StyleSheet} from 'react-native';
 import './config/ReactotronConfig';
 import AsyncStorage from '@react-native-community/async-storage';
 import createNavigation from './routes';
+import CodePush from 'react-native-code-push';
 
-export default class App extends Component {
+class App extends Component {
   state = {
     userCheckedOnAsyncStore: false,
     userLogged: false,
@@ -27,3 +28,7 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({});
+
+export default CodePush({
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+})(App);

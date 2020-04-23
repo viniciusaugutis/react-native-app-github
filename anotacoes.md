@@ -48,3 +48,8 @@ Responsável por salvar informações em um banco local do celular
 
 yarn add react-native-vector-icons
 react-native link react-native-vector-icons
+
+## Code push
+
+Atualizar uma versão sem enviar para loja de aplicativos.
+Quando fizer alteração que muda apenas código javascript, da para fazer o code push.

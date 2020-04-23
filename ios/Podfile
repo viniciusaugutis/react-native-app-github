@@ -83,6 +83,8 @@ target 'appGithub' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
   target 'appGithubTests' do
     inherit! :complete
     # Pods for testing

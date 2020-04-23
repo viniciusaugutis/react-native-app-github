@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Github APP</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">YOU_ANDROID_CODEPUSH_KEY</string>
+
 </resources>
