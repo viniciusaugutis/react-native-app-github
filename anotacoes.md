@@ -53,3 +53,10 @@ react-native link react-native-vector-icons
 
 Atualizar uma versão sem enviar para loja de aplicativos.
 Quando fizer alteração que muda apenas código javascript, da para fazer o code push.
+
+## One Signal
+
+Utilizado para push notification no react native
+
+yarn add react-native-onesignal
+react-native link react-native-onesignal
