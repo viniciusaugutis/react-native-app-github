@@ -60,3 +60,5 @@ Utilizado para push notification no react native
 
 yarn add react-native-onesignal
 react-native link react-native-onesignal
+
+Firebase que vai permitir nos utilizarmos o Google Cloud Manager, que é o serviço de push notification da google
