@@ -62,3 +62,17 @@ yarn add react-native-onesignal
 react-native link react-native-onesignal
 
 Firebase que vai permitir nos utilizarmos o Google Cloud Manager, que é o serviço de push notification da google
+
+## App Center
+
+Ferramenta da microsoft utilizada para codepush na aplicação
+
+yarn global add appcenter-cli
+
+appcenter login
+
+Loga na aplicação e copia a chave gerada
+
+appcenter apps list
+
+Gerar chave do codepush: appcenter codepush deployment list -a viniciusaugutis/App-Github-react-native-ANDROID -k

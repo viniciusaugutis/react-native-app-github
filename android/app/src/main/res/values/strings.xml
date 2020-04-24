@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Github APP</string>
-    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">YOU_ANDROID_CODEPUSH_KEY</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">cxcH7ZrQ-db-ZeT93QELY2LJRe9oh6iJsv9mg</string>
 
 </resources>
